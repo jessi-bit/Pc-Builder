@@ -1,0 +1,6 @@
+Bug da fixare:
+
+1- Autoconfig deve aggiornare il list compreso prezzo/power
+  possibile problema .subscribe nel metoto Autoconfig di listService
+2- Autoconfig deve poter creare autoconfigurazioni fin dal primo pcComponent
+  soluzione: aggiungere un if con condizione pcComponent is first

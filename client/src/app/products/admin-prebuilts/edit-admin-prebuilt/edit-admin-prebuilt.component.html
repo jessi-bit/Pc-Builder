@@ -1,0 +1,39 @@
+<form class="form" (ngSubmit)="onUpdatePrebuilt()" #f="ngForm">
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome Preassemblato</mat-label>
+    <input matInput
+      [(ngModel)]="loadedPrebuilt.name"
+      name="name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Prezzo Preassemblato</mat-label>
+    <input
+      matInput
+      [(ngModel)]="loadedPrebuilt.totalPrice"
+      name="totalPrice">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Utilizzo Preassemblato</mat-label>
+    <input
+      matInput
+      [(ngModel)]="loadedPrebuilt.usage"
+      name="usage">
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    >Modifica
+  </button>
+</form>
+
+<div *ngIf="saveComplete">
+  <div class="alert alert-success" role="alert" style="width: 80vh; margin: 15px;">
+    <h3>salvataggio Effettutato</h3>
+  </div>
+</div>
+

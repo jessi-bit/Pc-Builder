@@ -1,0 +1,43 @@
+<form class="form" (ngSubmit)="onAddPrebuilt()" #f="ngForm">
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput
+      ngModel
+      name="name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Utilizzo</mat-label>
+    <input matInput
+    ngModel
+    name="use">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Prezzo</mat-label>
+    <input matInput
+      ngModel
+      name="price">
+  </mat-form-field>
+
+  <label class="form-label" for="upload">Upload file</label>
+<input type="file" name="UploadFile" id="upload" (change)="upload($event.target.files)" class="form-control" />
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    routerLinkActive="active"
+    [routerLink]="['/add-prebuilt']"
+    >Aggiungi componenti
+  </button>
+</form>
+
+<div *ngIf="saveComplete">
+  <div class="alert alert-success" role="alert" style="width: 80vh; margin: 15px;">
+    <h3>salvataggio Effettutato</h3>
+  </div>
+</div>
+
+
